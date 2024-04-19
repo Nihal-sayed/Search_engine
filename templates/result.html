@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Search Result</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+</head>
+<body>
+    <div class="container">
+        <h1>Search Result</h1>
+        <p>Your search query: {{ query }}</p>
+        {% if is_present %}
+        <p>The search query is present in the CSV file.</p>
+        {% else %}
+        <p>The search query is not present in the CSV file.</p>
+        {% endif %}
+    </div>
+</body>
+</html>
